@@ -11,9 +11,9 @@
 
 ## Week 2
 
-**Work done last week**: Suggested Strategy pattern which can be implemented in the project. Here, Strategy would be implemented as different levels of the game. There would exist different maps and also speed of the car would be different in the respective maps which can handled as different strategies while implementing in Greenfoot.
+**Work done last week**: Researched on different kinds of games that can be implemented and finalized on the car dodging game with specifications to be discussed in the weekly meeting.  
 
-**Work to do**: Decide actors that would included in the project scope and start building the main screen of the project along with the mini-world in GreenFoot.
+**Work to do**: Suggest design patterns which can be implemented in the project. Also, discuss on the platform on which the game needs to be implemented based on the known information regarding the project and perform some basic research with respect to that.
 
 **Blockers**: Not finalizing the design patterns to be implemented in the first week meant that research on Greenfoot was pushed back by a week.
 
