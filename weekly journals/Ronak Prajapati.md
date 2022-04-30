@@ -32,3 +32,25 @@ finalized the scope of the project.
 - All explored platforms have been discussed with their pros and cons. Each team member shared their perspective on 
 which platform makes sense for the problem statement we're dealing with.
 - With proper communication of ideas, we finalized Greenfoot platform to use for implementation our game.
+
+
+## Week 3
+### Previous Work:
+- Proposed State Design Pattern to have different states like NoLifeLineState, OneLifeLineState, TwoLifeLineState,
+ThreeLifeLineState.
+- Finalized required design patterns based on the discussion and suggestions from team members.  
+- Discussed all the game development platforms explored so far and decided to go with greenfoot
+
+### Work to do:
+- Implement assigned design pattern
+- Start drafting class diagram supporting your implementation
+- Start drafting high level architecture diagram
+
+### Blockers
+
+
+### XP Value: Communication
+- Arranged a Scrum meeting to talk about the ideas and progress on assigned tasks.
+- Finalized to go with greenfoot platform for development.
+- Discussed all suggestions regarding required design patterns from team members and with collective feedback, decided 
+5 necessary design patterns to be incorporated for the game development.
