@@ -27,3 +27,20 @@
 * **Simplicity**: 
   * The team members focused on the effectiveness while discussing desing patterns
   * Just fitting patterns for the sake of implementation was never the case and we selected a game in which pattern implementation would really have great meaningful impact
+
+## Week 3
+
+**Accomplished Work**
+* Proposed and finalized effective design patterns that can be implemented in the project
+* Selected greenfoot as the platform to develop the scenario
+
+**Work to do**
+* Structure the code and start implementing the decided design pattern as per the scenario's requirements
+
+**Blockers**
+* ---
+
+**Xp Core Values**
+* **Simplicity**: 
+  * The meetings focused on assigning each individual a pattern from the ones decided and topics were never shifted to anything not asked for.
+  * Concise and to the point discussions led to faster task assignment and ideas on implementation.
