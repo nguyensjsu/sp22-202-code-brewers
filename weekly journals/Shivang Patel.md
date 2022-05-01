@@ -31,7 +31,7 @@
 ## Week 3
 
 **Accomplished Work**
-* Proposed and finalized effective design patterns that can be implemented in the project
+* Proposed and finalized effective design patterns (Singleton and Command Pattern) that can be implemented in the project
 * Selected greenfoot as the platform to develop the scenario
 
 **Work to do**
@@ -42,5 +42,5 @@
 
 **Xp Core Values**
 * **Simplicity**: 
-  * The meetings focused on assigning each individual a pattern from the ones decided and topics were never shifted to anything not asked for.
-  * Concise and to the point discussions led to faster task assignment and ideas on implementation.
+  * Kept the meetings focused on assigning each individual a pattern from the ones decided and topics were never shifted to anything not asked for
+  * Concise and to the point discussions led to faster task assignment and ideas on implementation
