@@ -15,9 +15,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Lifeline extends Actor
 {
-    private MyWorld world;
+    private ILevelInterface world;
     
-    public Lifeline(MyWorld world) {
+    public Lifeline(ILevelInterface world) {
         this.world = world;
     }
     

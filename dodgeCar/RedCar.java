@@ -17,7 +17,7 @@ import java.util.Random;
 public class RedCar extends Actor
 {
     private static final Random _rand = new Random(37L);
-    
+    private int speed;
     private int x;
     private int y;
     
@@ -26,16 +26,17 @@ public class RedCar extends Actor
         y = 0;
     }
     
-    public RedCar(int x) {
+    public RedCar(int x, int speed) {
         this.x = x;
         this.y = getImage().getHeight() / 2;
+        this.speed = speed;
     }
     
-    public RedCar(World world) {
+    public RedCar(World world, int speed) {
         int wWidth = world.getWidth();
         int wHeight = world.getHeight();
         int iHeight = getImage().getHeight();
-        
+        this.speed = speed;
         x = _rand.nextInt(wWidth);
         y = iHeight / 2;
     }
@@ -45,10 +46,10 @@ public class RedCar extends Actor
      */
     public void act() 
     {
-        y = y + 2;
+        y = y + this.speed;
         setLocation(x, y);
         if (isAtEdge()) {
-            ((MyWorld)getWorld()).removeRedCar(this);
+            ((ILevelInterface)getWorld()).removeRedCar(this);
         }
     }    
     
