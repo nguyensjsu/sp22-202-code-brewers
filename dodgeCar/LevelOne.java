@@ -19,6 +19,11 @@ public class LevelOne extends World implements ILevelInterface
     List<Integer> xHistory;
     long numRedCarsAdded = 0L;
     int maxRedCars = 5;
+    KeyInputMenuItem leftItem;
+    KeyInputMenuItem rightItem;
+    IKeyboardCommand leftCommand;
+    IKeyboardCommand rightCommand;
+    KeyInputMenu menu = new KeyInputMenu();
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -31,8 +36,10 @@ public class LevelOne extends World implements ILevelInterface
         
         xHistory = new ArrayList<>();
         xPositions = getXPositions();
+
+        setupKeyboardMenu();
         
-        greenCar = new GreenCar(this);
+        greenCar = GreenCar.getNewInstance(this);
         redCars = new ArrayList<>();
         
         addObject(greenCar, greenCar.getX(), greenCar.getY());
@@ -40,10 +47,46 @@ public class LevelOne extends World implements ILevelInterface
         this.speed = speed;
         addRedCar(speed);
     }
+
+    private void setupKeyboardMenu() {
+        leftItem = new KeyInputMenuItem();
+        rightItem = new KeyInputMenuItem();
+        leftCommand = new KeyboardCommand();
+        rightCommand = new KeyboardCommand();
+
+        leftCommand.setReceiver(
+            new IKeyboardReceiver() {
+                /** Command Action */
+                public void doAction() {
+                    greenCar.decrementXCoord();
+                }
+            }
+        );
+
+        rightCommand.setReceiver(
+            new IKeyboardReceiver() {
+                /** Command Action */
+                public void doAction() {
+                    greenCar.incrementXCoord();
+                }
+            }
+        );
+
+        leftItem.setCommand(leftCommand);
+        rightItem.setCommand(rightCommand);
+        menu.addItem("left", leftItem);
+        menu.addItem("right", rightItem);
+    }
     
     public void act() {
         super.act();
-        System.out.println(this.speed);
+
+        String key = getValidPressedKey();
+
+        if(key != null) {
+            menu.selectItem(key);
+        }
+        
         if (redCars.size() < maxRedCars) {
             double p = _rand.nextDouble();
             double t = (numRedCarsAdded < 5) ? 0.995d : 0.99d;
@@ -99,5 +142,25 @@ public class LevelOne extends World implements ILevelInterface
             positions.add(i);
         }
         return positions;
+    }
+
+    private String getValidPressedKey() {
+        if(Greenfoot.isKeyDown("right")) {
+            return "right";
+        }
+
+        if(Greenfoot.isKeyDown("left")) {
+            return "left";
+        }
+
+        // if(Greenfoot.isKeyDown("up")) {
+        //     return "up";
+        // }
+
+        // if(Greenfoot.isKeyDown("down")) {
+        //     return "down";
+        // }
+
+        return null;
     }
 }
