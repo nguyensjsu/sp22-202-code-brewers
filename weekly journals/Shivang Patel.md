@@ -44,3 +44,18 @@
 * **Simplicity**: 
   * Kept the meetings focused on assigning each individual a pattern from the ones decided and topics were never shifted to anything not asked for
   * Concise and to the point discussions led to faster task assignment and ideas on implementation
+
+## Week 4
+
+**Accomplished Work**
+* Implemented Singleton and Command Patterns in the code to fulfill the desired requirements
+
+**Work to do**
+* Integrate all the completed modules to complete the game
+
+**Blockers**
+* ---
+
+**Xp Core Values**
+* **Simplicity**: 
+  * Keeping the requirements in mind, the implementation was done in a way to have the features per module working without any delays due to extraneous factors/features
