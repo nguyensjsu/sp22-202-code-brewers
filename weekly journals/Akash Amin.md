@@ -38,3 +38,19 @@
 
 #### XP Value: Courage
 - Discussed multiple design patterns we could use for the project module implementation. However, after a week of research on how we can logically use the design patterns, we thought that we could possibly provide various crash elements like potholes, lifeline and traffic barrigates and use decorator design pattern to implement the module. We were first hesitant to use decorator pattern to provide change in score using that, but I encouraged the team, and we finally decided to go with Decorator design pattern.
+
+
+## Week - 4
+
+#### Previous work
+- Implemented the basic decorator pattern structure required for game implemention.
+- Understood the world and actos implementaions in Greenfoot.
+
+#### Work to do:
+- Implement the logic and functions to the decorator design pattern.
+- Integrating the modules and design patterns altogether to execute the complete game. 
+
+#### Blockers: none
+
+#### XP Value: Courage
+- The individual implementation of the code was easy but when it comes to integrating all the team members code contributions and running it together was complex, hence I provided my team courage to integrate the individual contributions.
