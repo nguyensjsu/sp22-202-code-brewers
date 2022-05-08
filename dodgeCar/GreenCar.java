@@ -43,21 +43,13 @@ public class GreenCar extends Actor
         greenCarInstance = new GreenCar(world);    
         return greenCarInstance;
     }
+
     /**
      * Act - do whatever the GreenCar wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        // if (Greenfoot.isKeyDown("left")) {
-        //     x = x - 1;
-        // } else if (Greenfoot.isKeyDown("right")) {
-        //     x = x + 1;
-        // } else if (Greenfoot.isKeyDown("up")) {
-        //     y = y - 1;
-        // } else if (Greenfoot.isKeyDown("down")) {
-        //     y = y + 1;
-        // }
         setLocation(x, y);
         checkCollision();
     }    
@@ -82,6 +74,7 @@ public class GreenCar extends Actor
     public void incrementHealth() {
         health = health + 1;
     }
+    
     public void incrementXCoord() {
         x = x + 1;
     }
