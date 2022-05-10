@@ -26,7 +26,7 @@
 
 **Work done last week**: Suggested Strategy pattern which can be implemented in the project. Here, Strategy would be implemented as different levels of the game. There would exist different maps and also speed of the car would be different in the respective maps which can handled as different strategies while implementing in Greenfoot.  
 
-**Work to do**: Start implementing Stratergy pattern as per the discussions. Also, create different classes and interfaces according to the actors agreed upon in the meetings. Start drafting class diagrams along side coding the individual classes in Greenfoot  
+**Work to do**: Start implementing Strategy pattern as per the discussions. Also, create different classes and interfaces according to the actors agreed upon in the meetings. Start drafting class diagrams along side coding the individual classes in Greenfoot  
 
 **Blockers**: None
 
@@ -34,3 +34,16 @@
 **Respect**: During the meeting, each and every individual respected each other's thoughts in terms of deciding upon which platform to utilize in the project and came up to Greenfoot as a solution to the project implementation approach.
 <br>
 **Feedback**: Gathered feedback in terms of firstly which tool to use in order to build up the project intended. Also, feedback from each and every participant was gathered regarding the classes and interface that would be needed in the coming weeks of development.
+
+## Week 4
+
+**Work done last week**: Implemented Strategy pattern in terms of 2 levels. These 2 levels differ on the speed of the obstacles that drop from the top of the screen in Greenfoot. The first level is an easier one with slow speed while the second one is a little difficult based on fast speed.
+
+**Work to do**: Integrating the code compartments of different members in order to make the game complete. Also, finalizing class diagram and other diagrams needed to completed before the deadline.
+
+**Blockers**: None
+
+**Xp Core Values**<br>
+**Respect**: Each one of the members explained the logic of how they had implemented different design patterns in the project to which all gave respect in the sense that they listened to them with an open mind and understood what each one was describing.
+<br>
+**Feedback**: After each of the team members explained their logic, gathered feedback on what other thought of the implementation and discussed further on if there were ways to improve on the same.
