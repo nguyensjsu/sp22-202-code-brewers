@@ -31,6 +31,10 @@ public class GreenCar extends Actor
         y = wHeight - (iHeight / 2);
     }
 
+    public int getHealth(){
+        return health;
+    }
+
     public static GreenCar getInstance() {
         if(greenCarInstance == null ) {
             System.out.println("No instance found");
@@ -51,18 +55,18 @@ public class GreenCar extends Actor
     public void act() 
     {
         setLocation(x, y);
-        checkCollision();
+        // checkCollision();
     }    
     
-    public void checkCollision() {
-        RedCar redCar = (RedCar) getOneIntersectingObject(RedCar.class);
-        if (redCar != null) {
-            decrementHealth();
-            if(health == 0) {
-                Greenfoot.stop();
-            }
-        }
-    }
+    // public void checkCollision() {
+    //     RedCar redCar = (RedCar) getOneIntersectingObject(RedCar.class);
+    //     if (redCar != null) {
+    //         decrementHealth();
+    //         if(health == 0) {
+    //             Greenfoot.stop();
+    //         }
+    //     }
+    // }
     
     public int getX() { return x; }
     public int getY() { return y; }

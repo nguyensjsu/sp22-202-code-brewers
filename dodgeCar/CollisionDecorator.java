@@ -1,15 +1,15 @@
-public class CollisionDecorator implements ICollisionObject {
+import greenfoot.Actor;
 
-	private ICollisionObject ICollisionObject;
+public class CollisionDecorator extends Actor {
 
-    public CollisionDecorator( ICollisionObject c )
+
+    public CollisionDecorator(  )
     {
-        ICollisionObject = c ;
     }
 
-	public String operation()
+    public void act() 
     {
-        return ICollisionObject.operation() ;
+
     }
 
 }

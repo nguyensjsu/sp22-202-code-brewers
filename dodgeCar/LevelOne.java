@@ -14,11 +14,14 @@ public class LevelOne extends World implements ILevelInterface
     private static final Random _rand = new Random(37L);
     GreenCar greenCar;
     List<RedCar> redCars;
+    List<LifeObstacle> lifeObstacles;
     List<Integer> xPositions;
     private int speed;
     List<Integer> xHistory;
     long numRedCarsAdded = 0L;
     int maxRedCars = 5;
+    long numLifeObstacleAdded = 0L;
+    int maxLifeObstacle = 5;
     KeyInputMenuItem leftItem;
     KeyInputMenuItem rightItem;
     IKeyboardCommand leftCommand;
@@ -41,11 +44,13 @@ public class LevelOne extends World implements ILevelInterface
         
         greenCar = GreenCar.getNewInstance(this);
         redCars = new ArrayList<>();
+        lifeObstacles = new ArrayList<>();
         
         addObject(greenCar, greenCar.getX(), greenCar.getY());
         addObject(new Lifeline(this), 85, 10);
         this.speed = speed;
         addRedCar(speed);
+        addLifeObstacle(speed);
     }
 
     private void setupKeyboardMenu() {
@@ -94,6 +99,13 @@ public class LevelOne extends World implements ILevelInterface
                 addRedCar(this.speed);
             }
         }
+        if (lifeObstacles.size() < maxLifeObstacle) {
+            double p = _rand.nextDouble();
+            double t = (numLifeObstacleAdded < 5) ? 0.995d : 0.99d;
+            if (p > t) {
+                addLifeObstacle(this.speed);
+            }
+        }
     }
     
     private void addRedCar(int speed) {
@@ -105,12 +117,27 @@ public class LevelOne extends World implements ILevelInterface
             maxRedCars += 1;
         }
     }
+
+    private void addLifeObstacle(int speed) {
+        LifeObstacle lifeObstacle = new LifeObstacle(getRandomXPosition(), speed);
+        lifeObstacles.add(lifeObstacle);
+        addObject(lifeObstacle, lifeObstacle.getX(), lifeObstacle.getY());
+        numLifeObstacleAdded += 1L;
+        if (numLifeObstacleAdded % 50 == 0) {
+            maxLifeObstacle += 1;
+        }
+    }
     
     public void removeRedCar(RedCar redCar) {
         redCars.remove(redCar);
         removeObject(redCar);
     }
     
+    public void removeLifeObstacle(LifeObstacle lifeObstacle) {
+        lifeObstacles.remove(lifeObstacle);
+        removeObject(lifeObstacle);
+    }
+
     public long getScore() { return numRedCarsAdded; }
     
     public int getLevel() { return maxRedCars - 5 + 1; }
