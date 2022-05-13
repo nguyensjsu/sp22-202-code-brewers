@@ -19,6 +19,7 @@ public class LifeObstacle extends CollisionDecorator
     private int speed;
     private int x;
     private int y;
+    private int[] xPos = {60, 180, 300, 420, 540};
     
     public LifeObstacle() {
         x = 0;
@@ -36,7 +37,7 @@ public class LifeObstacle extends CollisionDecorator
         int wHeight = world.getHeight();
         int iHeight = getImage().getHeight();
         this.speed = speed;
-        x = _rand.nextInt(wWidth);
+        x = this.xPos[_rand.nextInt(this.xPos.length)];
         y = iHeight / 2;
     }
 

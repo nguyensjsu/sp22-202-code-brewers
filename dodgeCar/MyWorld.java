@@ -16,7 +16,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld extends World
 {
     public MyWorld(){
-        super(700, 600, 1);
+        super(600, 600, 1);
         MainMenu mainMenu = new MainMenu();
         Greenfoot.setWorld(mainMenu);
     }
