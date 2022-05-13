@@ -37,8 +37,11 @@ public class LevelOne extends World implements ILevelInterface
         super(600, 600, 1); 
         Greenfoot.setSpeed(50);
         
+        GreenfootImage image = getBackground();
+        image.scale(600, 600);
+        
         xHistory = new ArrayList<>();
-        xPositions = getXPositions();
+        xPositions = new ArrayList<>(List.of(60, 180, 300, 420, 540));
 
         setupKeyboardMenu();
         
@@ -154,7 +157,7 @@ public class LevelOne extends World implements ILevelInterface
             }
         }
         
-        if (xHistory.size() > 5) {
+        if (xHistory.size() >= 5) {
             xHistory.remove(0);
         }
         
