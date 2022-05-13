@@ -15,20 +15,16 @@ public class NoLifeLineState implements ICarState
     {
         this.machine = m;
     }
-    
-    public void checkCollision()
-    {
-        int collisionCheck = this.machine.checkCollision();
-        if(collisionCheck==1)
-        {
-            Greenfoot.stop();
-        }
-        else if(collisionCheck==2)
-        {
-            this.incrementLife();
-            this.machine.setOneLifeLineState();
-        }
 
+    public void redCarCollision()
+    {
+        Greenfoot.stop();
+    }
+
+    public void lifeObstacleCollision()
+    {
+        this.incrementLife();
+        this.machine.setOneLifeLineState();
     }
     
     public void decrementLife()

@@ -6,7 +6,8 @@
  */
 public interface ICarState  
 {
-    void checkCollision();
+    void redCarCollision();
+    void lifeObstacleCollision();
     void decrementLife();
     void incrementLife();
 }

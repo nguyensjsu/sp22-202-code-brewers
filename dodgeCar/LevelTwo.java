@@ -174,11 +174,11 @@ public class LevelTwo extends World implements ILevelInterface
 
     private String getValidPressedKey() {
         if(Greenfoot.isKeyDown("right")) {
-            return "right";
+            return "left";
         }
 
         if(Greenfoot.isKeyDown("left")) {
-            return "left";
+            return "right";
         }
 
         // if(Greenfoot.isKeyDown("up")) {

@@ -6,7 +6,8 @@
  */
 public interface ICarStateMachine  
 {
-    int checkCollision();
+    void redCarCollision();
+    void lifeObstacleCollision();
     void decrementLife();
     void incrementLife();
     void setNoLifeLineState();

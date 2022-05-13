@@ -14,20 +14,17 @@ public class TwoLifeLineState implements ICarState
     {
         this.machine = m;
     }
-    
-    public void checkCollision()
+
+    public void redCarCollision()
     {
-        int collisionCheck = this.machine.checkCollision();
-        if(collisionCheck==1)
-        {
-            this.decrementLife();
-            this.machine.setOneLifeLineState();
-        }
-        else if(collisionCheck==2)
-        {
-            this.incrementLife();
-            this.machine.setThreeLifeLineState();
-        }
+        this.decrementLife();
+        this.machine.setOneLifeLineState();
+    }
+
+    public void lifeObstacleCollision()
+    {
+        this.incrementLife();
+        this.machine.setThreeLifeLineState();
     }
     
     public void decrementLife()

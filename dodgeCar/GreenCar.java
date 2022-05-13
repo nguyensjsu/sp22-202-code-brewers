@@ -58,9 +58,6 @@ public class GreenCar extends Actor
     public void act() 
     {
         setLocation(x, y);
-        System.out.println("Hi!!");
-        this.csm.checkCollision();
-        // checkCollision();
     }    
     
     // public void checkCollision() {
@@ -75,6 +72,18 @@ public class GreenCar extends Actor
     
     public int getX() { return x; }
     public int getY() { return y; }
+
+    
+    public void redCarCollision()
+    {
+        this.csm.redCarCollision();
+    }
+    
+   public void lifeObstacleCollision()
+    {
+        this.csm.lifeObstacleCollision();
+    }
+ 
 
     public void decrementHealth() {
         health = health - 1;

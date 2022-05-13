@@ -45,12 +45,14 @@ public class RedCar extends CollisionDecorator
         GreenCar greenCar = (GreenCar) getOneIntersectingObject(GreenCar.class);
         GreenCar greenCarIns = GreenCar.getInstance();
         if (greenCar != null) {
-            greenCarIns.decrementHealth();
-            if(greenCarIns.getHealth() == 0) {
-                Greenfoot.stop();
-            }
+            greenCarIns.redCarCollision();
+            getWorld().removeObject(this);
+            return;
         }
-        // System.out.println("GreenCar Health"+greenCarIns.getHealth());
+        if(isAtEdge()) {
+            getWorld().removeObject(this);
+            return;
+        }
     }
     /**
      * Act - do whatever the RedCar wants to do. This method is called whenever
@@ -58,20 +60,15 @@ public class RedCar extends CollisionDecorator
      */
     public void act() 
     {
-//        checkCollision();
         y = y + this.speed;
         setLocation(x, y);
-        if (isAtEdge()) {
-            ((ILevelInterface)getWorld()).removeRedCar(this);
-            // getWorld().removeObjects(getWorld().getObjects(RedCar.class));
-            // return;
-        }
-        
+        checkCollision();
     }    
     
     public int getX() { return x; }
     public int getY() { return y; }
     public int getWidth() { return getImage().getWidth(); }
     public int getHeight() { return getImage().getHeight(); }
+
 }
 

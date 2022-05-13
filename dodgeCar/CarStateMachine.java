@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class CarStateMachine extends Actor implements ICarStateMachine
+public class CarStateMachine implements ICarStateMachine
 {
     // instance variables - replace the example below with your own
     private int health;
@@ -29,26 +29,17 @@ public class CarStateMachine extends Actor implements ICarStateMachine
         this.s3 = new ThreeLifeLineState(this);
         this.state = this.s3;
     }
-    
-    public int checkCollision()
+
+    public void redCarCollision()
     {
-        System.out.println("Here!!");
-        RedCar redCar = (RedCar) getOneIntersectingObject(RedCar.class);
-        if (redCar != null)
-        {
-            System.out.println("Red car collided and detected!");
-            return 1;
-        }
-
-        LifeLine lifeLine = (LifeLine) getOneIntersectingObject(LifeLine.class);
-        if (lifeLine != null)
-        {
-            return 2;
-        }
-
-        return 0;
+        this.state.redCarCollision();
     }
-    
+
+    public void lifeObstacleCollision()
+    {
+        this.state.lifeObstacleCollision();
+    }
+
     public void decrementLife()
     {
         this.health--;
