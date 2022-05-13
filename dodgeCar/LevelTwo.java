@@ -18,7 +18,8 @@ public class LevelTwo extends World implements ILevelInterface
     List<Integer> xPositions;
     List<Integer> xHistory;
     private int speed;
-    long numRedCarsAdded = 0L;
+    // long numRedCarsAdded = 0L;
+    private Score sc;
     int maxRedCars = 5;
     int maxLifeObstacle = 1;
     KeyInputMenuItem leftItem;
@@ -47,7 +48,7 @@ public class LevelTwo extends World implements ILevelInterface
         greenCar = GreenCar.getNewInstance(this);
         redCars = new ArrayList<>();
         lifeObstacles = new ArrayList<>();
-        
+        sc = Score.getInstance();
         addObject(greenCar, greenCar.getX(), greenCar.getY());
         addObject(new Lifeline(this), 85, 10);
         this.speed = speed;
@@ -112,7 +113,8 @@ public class LevelTwo extends World implements ILevelInterface
         RedCar redCar = new RedCar(getRandomXPosition(), speed);
         redCars.add(redCar);
         addObject(redCar, redCar.getX(), redCar.getY());
-        numRedCarsAdded += 1L;
+        // numRedCarsAdded += 1L;
+        sc.incrementScore();
     }
 
     private void addLifeObstacle(int speed) {
@@ -131,7 +133,7 @@ public class LevelTwo extends World implements ILevelInterface
         removeObject(lifeObstacle);
     }
     
-    public long getScore() { return numRedCarsAdded; }
+    // public long getScore() { return numRedCarsAdded; }
     
     public int getLevel() { return maxRedCars - 5 + 1; }
     

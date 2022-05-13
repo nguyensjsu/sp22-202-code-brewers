@@ -27,7 +27,7 @@ public class Lifeline extends Actor
      */
     public void act() 
     {
-        String s = "Score: " + world.getScore() + ", Health: " + GreenCar.getInstance().getHealth();
+        String s = "Score: " + Score.getInstance().getScore() + ", Health: " + GreenCar.getInstance().getHealth();
         GreenfootImage img = new GreenfootImage(s, 24, Color.GREEN, Color.BLACK);
         setImage(img);
     }    

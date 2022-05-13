@@ -17,7 +17,7 @@ public class GreenCar extends Actor
 {
     private int x;
     private int y;
-    private static GreenCar greenCarInstance = null;
+    private static GreenCar greenCarInstance = null;    
     private int health = 1;
     private CarStateMachine csm;
 

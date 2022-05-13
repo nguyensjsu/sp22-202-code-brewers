@@ -10,6 +10,6 @@ public interface ILevelInterface
     void act();
     void removeRedCar(RedCar redcar);
     void removeLifeObstacle(LifeObstacle lifeObstacle);
-    long getScore();
+    // long getScore();
     int getLevel();
 }

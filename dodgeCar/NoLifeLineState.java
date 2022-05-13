@@ -18,7 +18,7 @@ public class NoLifeLineState implements ICarState
 
     public void redCarCollision()
     {
-        Greenfoot.stop();
+        Greenfoot.setWorld(new GameOver());
     }
 
     public void lifeObstacleCollision()
