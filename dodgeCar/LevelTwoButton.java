@@ -15,7 +15,7 @@ public class LevelTwoButton extends Actor
     
     public LevelTwoButton(){
         GreenfootImage image = getImage();
-        image.scale(175, 100);
+        image.scale(200, 200);
     }
     
     public void act()

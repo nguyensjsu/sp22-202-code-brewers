@@ -94,11 +94,11 @@ public class GreenCar extends Actor
     }
     
     public void incrementXCoord() {
-        x = x + 1;
+        x = x + 5;
     }
 
     public void decrementXCoord() {
-        x = x - 1;
+        x = x - 5;
     }
 
     public void incrementYCoord() {

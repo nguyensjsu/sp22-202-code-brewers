@@ -9,8 +9,8 @@ public class StrategyBuilder implements IStrategy
 {
     // instance variables - replace the example below with your own
     private ILevelInterface level;
-    private int levelOneSpeed = 2;
-    private int levelTwoSpeed = 5;
+    private int levelOneSpeed = 4;
+    private int levelTwoSpeed = 7;
 
     /**
      * Constructor for objects of class StrategyBuilder
