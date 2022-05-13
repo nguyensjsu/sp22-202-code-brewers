@@ -45,12 +45,12 @@ public class LifeObstacle extends CollisionDecorator
         GreenCar greenCar = (GreenCar) getOneIntersectingObject(GreenCar.class);
         GreenCar greenCarIns = GreenCar.getInstance();
         if (greenCar != null) {
-            greenCarIns.lifeObstacleCollision();
-            getWorld().removeObject(this);
+            greenCarIns.lifeObstacleCollision();   
+            ((ILevelInterface)getWorld()).removeLifeObstacle(this);
             return;
         }
         if(isAtEdge()) {
-            getWorld().removeObject(this);
+            ((ILevelInterface)getWorld()).removeLifeObstacle(this);
             return;
         }
     }

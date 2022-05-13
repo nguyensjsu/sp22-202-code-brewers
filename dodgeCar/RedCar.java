@@ -47,11 +47,11 @@ public class RedCar extends CollisionDecorator
         GreenCar greenCarIns = GreenCar.getInstance();
         if (greenCar != null) {
             greenCarIns.redCarCollision();
-            getWorld().removeObject(this);
+            ((ILevelInterface)getWorld()).removeRedCar(this);
             return;
         }
         if(isAtEdge()) {
-            getWorld().removeObject(this);
+            ((ILevelInterface)getWorld()).removeRedCar(this);
             return;
         }
     }

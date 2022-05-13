@@ -20,8 +20,7 @@ public class LevelTwo extends World implements ILevelInterface
     private int speed;
     long numRedCarsAdded = 0L;
     int maxRedCars = 5;
-    long numLifeObstacleAdded = 0L;
-    int maxLifeObstacle = 5;
+    int maxLifeObstacle = 1;
     KeyInputMenuItem leftItem;
     KeyInputMenuItem rightItem;
     IKeyboardCommand leftCommand;
@@ -97,16 +96,13 @@ public class LevelTwo extends World implements ILevelInterface
 
         if (redCars.size() < maxRedCars) {
             double p = _rand.nextDouble();
-            double t = (numRedCarsAdded < 5) ? 0.995d : 0.99d;
-            if (p > t) {
+            if (p > 0.995d) {
                 addRedCar(this.speed);
             }
         }
-
         if (lifeObstacles.size() < maxLifeObstacle) {
             double p = _rand.nextDouble();
-            double t = (numLifeObstacleAdded < 5) ? 0.995d : 0.99d;
-            if (p > t) {
+            if (p > 0.995d) {
                 addLifeObstacle(this.speed);
             }
         }
@@ -117,28 +113,21 @@ public class LevelTwo extends World implements ILevelInterface
         redCars.add(redCar);
         addObject(redCar, redCar.getX(), redCar.getY());
         numRedCarsAdded += 1L;
-        if (numRedCarsAdded % 50 == 0) {
-            maxRedCars += 1;
-        }
     }
 
     private void addLifeObstacle(int speed) {
         LifeObstacle lifeObstacle = new LifeObstacle(getRandomXPosition(), speed);
         lifeObstacles.add(lifeObstacle);
         addObject(lifeObstacle, lifeObstacle.getX(), lifeObstacle.getY());
-        numLifeObstacleAdded += 1L;
-        if (numLifeObstacleAdded % 50 == 0) {
-            maxLifeObstacle += 1;
-        }
     }
     
     public void removeRedCar(RedCar redCar) {
-        redCars.remove(redCar);
+        redCars.remove(redCars.size() - 1);
         removeObject(redCar);
     }
 
     public void removeLifeObstacle(LifeObstacle lifeObstacle) {
-        lifeObstacles.remove(lifeObstacle);
+        lifeObstacles.remove(lifeObstacles.size() - 1);
         removeObject(lifeObstacle);
     }
     
