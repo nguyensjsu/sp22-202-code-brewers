@@ -58,7 +58,7 @@ public class RedCar extends CollisionDecorator
      */
     public void act() 
     {
-        checkCollision();
+//        checkCollision();
         y = y + this.speed;
         setLocation(x, y);
         if (isAtEdge()) {

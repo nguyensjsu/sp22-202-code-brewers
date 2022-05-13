@@ -17,9 +17,10 @@ public class GreenCar extends Actor
 {
     private int x;
     private int y;
-
     private static GreenCar greenCarInstance = null;
     private int health = 1;
+    private CarStateMachine csm;
+
     
     public GreenCar(World world) {
         int wWidth = world.getWidth();
@@ -29,10 +30,12 @@ public class GreenCar extends Actor
         
         x = (wWidth / 2) - (iWidth / 2);
         y = wHeight - (iHeight / 2);
+        
+        csm = new CarStateMachine();
     }
 
     public int getHealth(){
-        return health;
+        return this.csm.getHealth();
     }
 
     public static GreenCar getInstance() {
@@ -55,6 +58,8 @@ public class GreenCar extends Actor
     public void act() 
     {
         setLocation(x, y);
+        System.out.println("Hi!!");
+        this.csm.checkCollision();
         // checkCollision();
     }    
     

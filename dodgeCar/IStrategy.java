@@ -6,6 +6,6 @@
  */
 public interface IStrategy  
 {
-    int levelOneSpeed();
-    int levelTwoSpeed();
+    int getLevelOneSpeed();
+    int getLevelTwoSpeed();
 }

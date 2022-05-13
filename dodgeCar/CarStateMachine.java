@@ -32,9 +32,11 @@ public class CarStateMachine extends Actor implements ICarStateMachine
     
     public int checkCollision()
     {
+        System.out.println("Here!!");
         RedCar redCar = (RedCar) getOneIntersectingObject(RedCar.class);
         if (redCar != null)
         {
+            System.out.println("Red car collided and detected!");
             return 1;
         }
 
@@ -75,6 +77,11 @@ public class CarStateMachine extends Actor implements ICarStateMachine
     public void setThreeLifeLineState()
     {
         this.state = this.s3;
+    }
+    
+    public int getHealth()
+    {
+        return this.health;
     }
 
 }

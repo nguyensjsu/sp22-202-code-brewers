@@ -9,6 +9,8 @@ public class StrategyBuilder implements IStrategy
 {
     // instance variables - replace the example below with your own
     private ILevelInterface level;
+    private int levelOneSpeed = 2;
+    private int levelTwoSpeed = 5;
 
     /**
      * Constructor for objects of class StrategyBuilder
@@ -17,12 +19,12 @@ public class StrategyBuilder implements IStrategy
     {
     }
     
-    public int levelOneSpeed(){
-        return 2;
+    public int getLevelOneSpeed(){
+        return this.levelOneSpeed;
     }
     
-    public int levelTwoSpeed(){
-        return 5;
+    public int getLevelTwoSpeed(){
+        return this.levelTwoSpeed;
     }
 
     /**
@@ -34,10 +36,10 @@ public class StrategyBuilder implements IStrategy
     public void buildLevel(int x)
     {
         if (x==1){
-             Greenfoot.setWorld(new LevelOne(this.levelOneSpeed()));   
+             Greenfoot.setWorld(new LevelOne(this.getLevelOneSpeed()));
         }
         else{
-            Greenfoot.setWorld(new LevelTwo(this.levelTwoSpeed()));    
+            Greenfoot.setWorld(new LevelTwo(this.getLevelTwoSpeed()));
         }
     }
 }
