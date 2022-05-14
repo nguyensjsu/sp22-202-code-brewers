@@ -68,7 +68,7 @@ Here are a few screenshots of the gameplay:
 - **IKeyboardReceiver** defines a set of methods that need to be implemented by a receiver which is resposnsible to call the actual action that needs to be executed on an input. (what logic/code adjustments should happen on the left/right press)
 - **KeyboardCommand** implements the IKeyboardCommand interface and is responsible for calling the specific receiver (IKeyboardReceiver) as per the input given by the user.
 - **IKeyInputInvoker** defines a set of methods that a KeyInputMenuItem implements.
-- **KeyInputMenuItem** implements the IKeyInputInvoker interface and is responsible for calling the specific receiver (IKeyboardReceiver) as per the input given by the user. It acts as a container of a command which eventually passes it to the correct receiver that can handle it.
+- **KeyInputMenuItem** implements the IKeyInputInvoker interface and is responsible for calling the specific command (KeyboardCommand) as per the input given by the user. It acts as a container of a command which eventually passes it to the correct receiver that can handle it.
 - **KeyInputMenu** manages a HashMap of all the KeyInputMenuItems so each expected input is mapped accordingly to the correct menuItem. It helps to get the menuItem by accessing the map of items.
 - This way when for example left is pressed, the map of items fetches us the item that holds the command for it and invokes it.
 - This specific command calls the receiver that is assigned to handle the left input and (as per in Level One) shifts the greencar to the left.
