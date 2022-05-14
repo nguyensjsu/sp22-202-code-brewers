@@ -110,6 +110,9 @@ Here are a few screenshots of the gameplay:
   table below:
 ![alt text](./images/stateTransitionTable.png?raw=True)
 
+### Class Diagram of the Project
+![alt text](./images/ClassDiagram.png?raw=True)
+
 ### Game Features
 - 2 levels in the game
 - 4 lives given to the player initially
