@@ -50,7 +50,7 @@ public class LevelOne extends World implements ILevelInterface
         lifeObstacles = new ArrayList<>();
         sc = Score.getInstance();
         addObject(greenCar, greenCar.getX(), greenCar.getY());
-        addObject(new Lifeline(this), 85, 10);
+        addObject(new Lifeline(), 85, 10);
         this.speed = speed;
         addRedCar(speed);
         addLifeObstacle(speed);
