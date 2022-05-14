@@ -29,7 +29,11 @@ This project is about a game developed in Greenfoot named **DodgeCar** in which 
 
 ## Summary of the project
 
+DodgeCar is a game developed using a JAVA based platform named Greenfoot which helps in creating innovative games using simple JAVA code base. The game revolves around the user playing as a green car avoiding obstacles as they come in the way. The obstacles are of 2 types: Red Car and Lifeline. The goal is to avoid crashing into red cars and collecting lifelines in order to score the highest before losing all your health.
 
+At the start of each level, the user is provided with 4 health points. The health points reduce by 1 with every crash into a red car and it can incremented by the same amount when Lifeline is collected to a maximum cap of 4. The score is calculated as per the count of red cars passed till the user has no health points left to play further.
+
+Here are a few screenshots of the gameplay:
 
 ### Main Screen
 ![alt text](./images/mainScreen.png?raw=True)
@@ -57,7 +61,13 @@ This project is about a game developed in Greenfoot named **DodgeCar** in which 
 3. **Strategy** by Haard Shah
 ![alt text](./images/StrategyDesignPattern.png?raw=True)
 
-- 
+- Two strategies (levels) have been implemented in the game where some aspect of the game have been manipulated to make the game more interesting.
+    - **Level One**: Speed of the obstacles coming down have been set to a normal rate which is much easier for user to deal with and score easily with 4 health points.
+    - **Level Two**: Speed of the obstacles is increased compared to Level One which makes is more competitive. Also, the keyboard commands have been interchanged to make it more difficult along with decreasing the probability of Lifelines coming down.
+- **IStrategy** acts as the interface for the strategies which they need to abide by.
+- **LevelOne** and **LevelTwo** are the concrete strategies.
+- **ILevelInterface** defines the generic functionalities that the levels need to perform in order to get the game going.
+- **StrategyBuilder** helps in order to orchestrate the levels between different calls within the project.
 
 4. **Decorator** by Akash Amin
 
