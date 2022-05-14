@@ -50,7 +50,7 @@ public class LevelOne extends World implements ILevelInterface
         lifeObstacles = new ArrayList<>();
         sc = Score.getNewInstance();
         addObject(greenCar, greenCar.getX(), greenCar.getY());
-        addObject(new Lifeline(this), 85, 10);
+        addObject(new Lifeline(), 85, 10);
         this.speed = speed;
         addRedCar(speed);
         addLifeObstacle(speed);
@@ -102,7 +102,7 @@ public class LevelOne extends World implements ILevelInterface
         }
         if (lifeObstacles.size() < maxLifeObstacle) {
             double p = _rand.nextDouble();
-            if (p > 0.999d) {
+            if (p > 0.995d && lifeObstacles.size() < 1) {
                 addLifeObstacle(this.speed);
             }
         }
