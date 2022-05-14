@@ -55,8 +55,23 @@ Here are a few screenshots of the gameplay:
 ### Class Diagrams for each Design Pattern Implemented
 
 1. **Singleton** by Shivang Patel
+![Singleton Pattern Image](./images/SingletonDesignPattern.png?raw=True)
+- A single instance of the classes GreenCar and Score is shared by the whole application.
+- The reason for doing this is to manage the greencar/user (health) and score attributes of the game. There is going to be only one user/GreenCar and one scoreboard that are affected by multiple obstacles.
+- To implement this, static instances of the classes were created which were then accessed using getInstance() method of the particular classes and thus managing a single object. 
 
 2. **Command** by Shivang Patel
+![Command Pattern Image](./images/CommandDesignPattern.png?raw=True)
+- The GreenCar is managed using interactions by the user given from the keyboard i.e. left or right movements.
+- These inputs were implemented by viewing them as commands from the user.
+- **IKeyboardCommand** defines a set of methods that needs to be implemented by a KeyboardCommand.
+- **IKeyboardReceiver** defines a set of methods that need to be implemented by a receiver which is resposnsible to call the actual action that needs to be executed on an input. (what logic/code adjustments should happen on the left/right press)
+- **KeyboardCommand** implements the IKeyboardCommand interface and is responsible for calling the specific receiver (IKeyboardReceiver) as per the input given by the user.
+- **IKeyInputInvoker** defines a set of methods that a KeyInputMenuItem implements.
+- **KeyInputMenuItem** implements the IKeyInputInvoker interface and is responsible for calling the specific receiver (IKeyboardReceiver) as per the input given by the user. It acts as a container of a command which eventually passes it to the correct receiver that can handle it.
+- **KeyInputMenu** manages a HashMap of all the KeyInputMenuItems so each expected input is mapped accordingly to the correct menuItem. It helps to get the menuItem by accessing the map of items.
+- This way when for example left is pressed, the map of items fetches us the item that holds the command for it and invokes it.
+- This specific command calls the receiver that is assigned to handle the left input and (as per in Level One) shifts the greencar to the left.
 
 3. **Strategy** by Haard Shah
 ![alt text](./images/StrategyDesignPattern.png?raw=True)
