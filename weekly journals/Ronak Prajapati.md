@@ -77,3 +77,22 @@ ThreeLifeLineState.
 - Each team member presented their implementation of design pattern and other members shared their feedback.
 - Noted down the opinions of the team-mates regarding the implementation.
 - Opened up a discussion on the plan for integration and documentation phase of the project. 
+
+
+## Before Demo Day
+### Previous Work:
+- Integrated all the modules.
+- Created uml diagrams i.e. Class Diagram and Component Diagram. 
+- Completed the documentation of the project in the README file.
+- Created standalone Greenfoot Project File (.gfar) of the software.
+- Created demo videos and ad video of the game developed.
+
+### Work to do:
+- Demo
+
+### Blockers
+
+
+### XP Value: Communication
+- Arranged meet up for the team to work together on integration and documentation phase.
+- Gathered ideas from each team member for ad video creation and demo.
