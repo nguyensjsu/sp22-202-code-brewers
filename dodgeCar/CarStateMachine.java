@@ -72,7 +72,7 @@ public class CarStateMachine implements ICarStateMachine
     
     public int getHealth()
     {
-        return this.health;
+        return this.health+1;
     }
 
 }
