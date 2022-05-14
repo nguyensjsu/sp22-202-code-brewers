@@ -54,3 +54,26 @@ ThreeLifeLineState.
 - Finalized to go with greenfoot platform for development.
 - Discussed all suggestions regarding required design patterns from team members and with collective feedback, decided 
 5 necessary design patterns to be incorporated for the game development.
+
+
+## Week 4
+### Previous Work:
+- Implemented State Design Pattern to have different states like NoLifeLineState, OneLifeLineState, TwoLifeLineState,
+  ThreeLifeLineState. 
+- Interfaces (ICarState and ICarStateMachine) are created to support the implementation of State Design Pattern.
+- Drafted Class Diagram (for each individual design pattern developed) and Component Diagram.
+
+### Work to do:
+- Integrate of various components developed by the team members.
+- Create Class Diagram and Component Diagram.
+- Document work in README.
+- Test the integrated version before the demo day.
+
+### Blockers
+
+
+### XP Value: Communication
+- Set up meeting to discuss progress of the team and project.
+- Each team member presented their implementation of design pattern and other members shared their feedback.
+- Noted down the opinions of the team-mates regarding the implementation.
+- Opened up a discussion on the plan for integration and documentation phase of the project. 
