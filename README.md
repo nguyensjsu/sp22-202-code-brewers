@@ -53,7 +53,7 @@ Here are a few screenshots of the gameplay:
 ![alt text](./images/UI_Wireframe.png?raw=True)
 
 ### Component Diagram
-
+![alt text](./images/dodgeCarComponentDiagram.png?raw=True)
 
 ### Class Diagrams for each Design Pattern Implemented
 
@@ -96,6 +96,27 @@ Here are a few screenshots of the gameplay:
 - The **RedCar** and **LifeObstacle** are two decorators that implements the functionality where it checks collision with GreenCar and provides the collision update accordingly.
 
 5. **State** by Ronak Prajapati
+![alt text](./images/StateDesignPattern.png?raw=True)
+
+- Behaviour of the game (Player's Car/GreenCar) depends on CatStateMachine state. It makes state transitions based on the health remaining
+  for the player's car for the ongoing game States can be transited to NoLifeLineState, OneLifeLineState, 
+  TwoLifeLineState and ThreeLifeLineState.
+- On the event of collision, CarStateMachine identifies the collided obstacle which can be either RedCar or Life.
+- CarStateMachine uses ICarStateMachine interface to implement required methods to perform its tasks of handling state 
+  of the user's car during the game.
+- All the states mentioned earlier implements ICarState interface in order to define the necessary methods declared in 
+  the interface.
+- All the state transitions based on the current state of the CarStateMachine are indicated in the state transition 
+  table below:
+![alt text](./images/stateTransitionTable.png?raw=True)
+
+### Game Features
+- 2 levels in the game
+- 4 lives given to the player initially
+- 2 types of obstacles: RedCar and Life
+- Colliding with RedCar Obstacle will result in the loss of one life at a time
+- Colliding with Life Obstacle will gain a life (Maximum number of lives a player gets to keep is 4)
+- Game will be over when player collides with RedCar having only 1 life and player's score will be displayed
 
 ## Project Backlog and Burndown Chart
 1. Backlog
