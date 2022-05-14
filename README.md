@@ -89,8 +89,8 @@ Here are a few screenshots of the gameplay:
 
 - To make the game more interesting we have provided with two obstacles, one is the Red Car obstacle and the other is the Life Obstacle.
 - The Decorator design pattern is implemented to provide Collision checks to various obstacles.
-- The CollisionDecorator basically defines the structure for the decorators and extends the actor class of greenfoot.
-- The RedCar and LifeObstacle are two decorators that implements the functionality where it checks collision with GreenCar and provides the collision update accordingly.
+- The **CollisionDecorator** basically defines the structure for the decorators and extends the **Actor** class of greenfoot.
+- The **RedCar** and **LifeObstacle** are two decorators that implements the functionality where it checks collision with GreenCar and provides the collision update accordingly.
 
 5. **State** by Ronak Prajapati
 
