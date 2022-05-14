@@ -21,7 +21,7 @@ public class LevelOne extends World implements ILevelInterface
     // long numRedCarsAdded = 0L;
     private Score sc;
     int maxRedCars = 5;
-    int maxLifeObstacle = 2;
+    int maxLifeObstacle = 1;
     KeyInputMenuItem leftItem;
     KeyInputMenuItem rightItem;
     IKeyboardCommand leftCommand;
@@ -48,7 +48,7 @@ public class LevelOne extends World implements ILevelInterface
         greenCar = GreenCar.getNewInstance(this);
         redCars = new ArrayList<>();
         lifeObstacles = new ArrayList<>();
-        sc = Score.getInstance();
+        sc = Score.getNewInstance();
         addObject(greenCar, greenCar.getX(), greenCar.getY());
         addObject(new Lifeline(), 85, 10);
         this.speed = speed;
@@ -102,7 +102,7 @@ public class LevelOne extends World implements ILevelInterface
         }
         if (lifeObstacles.size() < maxLifeObstacle) {
             double p = _rand.nextDouble();
-            if (p > 0.995d) {
+            if (p > 0.995d && lifeObstacles.size() < 1) {
                 addLifeObstacle(this.speed);
             }
         }

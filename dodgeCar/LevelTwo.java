@@ -48,7 +48,7 @@ public class LevelTwo extends World implements ILevelInterface
         greenCar = GreenCar.getNewInstance(this);
         redCars = new ArrayList<>();
         lifeObstacles = new ArrayList<>();
-        sc = Score.getInstance();
+        sc = Score.getNewInstance();
         addObject(greenCar, greenCar.getX(), greenCar.getY());
         addObject(new Lifeline(), 85, 10);
         this.speed = speed;
@@ -97,13 +97,13 @@ public class LevelTwo extends World implements ILevelInterface
 
         if (redCars.size() < maxRedCars) {
             double p = _rand.nextDouble();
-            if (p > 0.995d) {
+            if (p > 0.99d) {
                 addRedCar(this.speed);
             }
         }
         if (lifeObstacles.size() < maxLifeObstacle) {
             double p = _rand.nextDouble();
-            if (p > 0.995d) {
+            if (p > 0.999d && lifeObstacles.size() < 1) {
                 addLifeObstacle(this.speed);
             }
         }
