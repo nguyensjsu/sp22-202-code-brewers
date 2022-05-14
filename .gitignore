@@ -17,5 +17,9 @@
 *.tar.gz
 *.rar
 
+*.idea
+*.ctxt
+*.class
+
 # GreenFoot
 *.greenfoot
