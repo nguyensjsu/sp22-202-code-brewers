@@ -102,7 +102,7 @@ public class LevelOne extends World implements ILevelInterface
         }
         if (lifeObstacles.size() < maxLifeObstacle) {
             double p = _rand.nextDouble();
-            if (p > 0.999d) {
+            if (p > 0.995d && lifeObstacles.size() < 1) {
                 addLifeObstacle(this.speed);
             }
         }

@@ -97,13 +97,13 @@ public class LevelTwo extends World implements ILevelInterface
 
         if (redCars.size() < maxRedCars) {
             double p = _rand.nextDouble();
-            if (p > 0.995d) {
+            if (p > 0.99d) {
                 addRedCar(this.speed);
             }
         }
         if (lifeObstacles.size() < maxLifeObstacle) {
             double p = _rand.nextDouble();
-            if (p > 0.999d) {
+            if (p > 0.999d && lifeObstacles.size() < 1) {
                 addLifeObstacle(this.speed);
             }
         }
